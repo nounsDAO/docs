@@ -29,7 +29,13 @@ export default async function RootLayout({ children }) {
       // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
     >
-      <Head color={{ hue: 347, saturation: 65, lightness: 54 }}>
+      <Head
+        color={{
+          hue: { dark: 347, light: 347 },
+          saturation: { dark: 65, light: 95 },
+          lightness: { dark: 54, light: 54 },
+        }}
+      >
         <link rel="shortcut icon" href="/images/general/docs-head.svg" />
         {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
